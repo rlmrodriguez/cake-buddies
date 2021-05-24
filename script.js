@@ -4,6 +4,11 @@ $('document').ready(function () {
     $('.menu-toggle').toggleClass('active');
   });
 
+  $('.js-scroll-trigger').on('click', () => {
+    $('.navbar-collapse').collapse('hide');
+    $('.menu-toggle').removeClass('active');
+  });
+
   /* Owl Carousel */
   $('.products-crsl').owlCarousel({
     loop: true,

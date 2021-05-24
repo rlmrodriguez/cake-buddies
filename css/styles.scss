@@ -71,6 +71,7 @@ li {
 .header {
   background-color: $primary-color;
   z-index: 100;
+  width: 100%;
 
   .navbar {
     padding: 0.8rem 0;
@@ -145,16 +146,12 @@ li {
   background-color: $secondary-color;
   font-size: 1.5rem;
   color: $text-color;
-  // transform: scale(0.95);
   transition: all 0.3s ease-in-out;
 }
 
 .home-btn:hover {
-  // border-color: $secondary-color;
   background-color: rgba(225, 29, 116, 0.7);
-  // filter: brightness(1.1);
   color: $text-color;
-  // transform: scale(1);
 }
 
 .bg-hero {
