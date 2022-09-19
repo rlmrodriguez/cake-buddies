@@ -1,16 +1,30 @@
-$('document').ready(function () {
+$("document").ready(function () {
+  function toggleScroll() {
+    if ($(".menu-toggle").hasClass("active")) {
+      $("body").css("overflow", "hidden");
+    } else {
+      $("body").css("overflow", "auto");
+    }
+  }
   /* Navbar Menu Toggle */
-  $('.menu-toggle').on('click', () => {
-    $('.menu-toggle').toggleClass('active');
+  $(".menu-toggle").on("click", () => {
+    $(".menu-toggle").toggleClass("active");
+    toggleScroll();
   });
 
-  $('.js-scroll-trigger').on('click', () => {
-    $('.navbar-collapse').collapse('hide');
-    $('.menu-toggle').removeClass('active');
+  $(".js-scroll-trigger").on("click", () => {
+    $(".navbar-collapse").collapse("hide");
+    $(".menu-toggle").removeClass("active");
+    toggleScroll();
+  });
+
+  $(".info-box").on("mouseover", function () {
+    $(".info-box:nth-child(1)").removeClass("active");
+    $(this).addClass("active");
   });
 
   /* Owl Carousel */
-  $('.products-crsl').owlCarousel({
+  $(".creations-carousel").owlCarousel({
     loop: true,
     margin: 10,
     responsiveClass: true,
@@ -33,10 +47,10 @@ $('document').ready(function () {
 
   //Scroll to top button
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn();
+    if ($(this).scrollTop() > 300) {
+      $(".back-to-top").fadeIn();
     } else {
-      $('.back-to-top').fadeOut();
+      $(".back-to-top").fadeOut();
     }
   });
 });
